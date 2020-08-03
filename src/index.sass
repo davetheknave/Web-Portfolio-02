@@ -1,0 +1,43 @@
+$primary: #222
+$background: #eee
+$accent: #d65
+$primary-light: white
+
+ul.menu
+    display: flex
+    flex-flow: column
+    justify-content: right
+    justify-items:right
+    text-align: right
+    row-gap: 2em
+    list-style-type: none
+    padding: 0
+    margin-top: 3em
+    a
+        color: $primary-light
+        font-weight: bold
+        text-decoration: none
+        background-color: $accent
+        padding: 0.5em
+        text-align: right
+
+#content 
+  display: flex
+  align-items: center
+  height: 80vh
+  padding: 5em
+
+#home
+    flex-basis: 34%
+    text-align: right
+h1
+    text-align: right
+body 
+    margin: 0
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    background-color: $background
+    color: $primary
