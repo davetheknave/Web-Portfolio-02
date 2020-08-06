@@ -5,12 +5,12 @@ import {BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 class GalleryImage extends React.Component {
     render(){
         return (
-            <Link className="gallery-item" to={this.props.link}>
+            <a className="gallery-item" href={this.props.link}>
             <div className="gallery-item-thumb">
                 <img src={this.props.image}/>
             </div>
             <h4 className="caption">{this.props.text}</h4>
-            </Link>
+            </a>
         )
     }
 }
@@ -19,7 +19,7 @@ class Gallery extends React.Component {
     getGallery(){
         var gallery = [];
         for (const entry of this.props.items) {
-            gallery.push(<GalleryImage link="" text={entry["name"]} image={entry["image"]}/>);
+            gallery.push(<GalleryImage link={entry["link"]} text={entry["name"]} image={entry["image"]}/>);
         }
         return gallery
     }

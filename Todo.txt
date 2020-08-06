@@ -1,0 +1,14 @@
+FEATURES
+Detail view
+Add all content
+
+COSMETIC
+Animations
+Colorscheme
+Favicon
+
+POLISH
+Responsive design
+Cross browser
+Go back on second link click
+Publish
