@@ -1,10 +1,4 @@
-$primary: #222
-$background: #eee
-$accent: #d65
-$primary-light: white
-$sidebar: 500px
-$title-font: 'Raleway', sans-serif
-$body-font: 'Lato', sans-serif
+@import 'common'
 
 ul.menu
     display: flex
@@ -19,7 +13,9 @@ ul.menu
         position: relative
         color: $primary-light
         background-color: $accent
+        background-image: linear-gradient(to bottom right, $accent, $accent2)
         padding: 0.5em
+        @include card
         &.active
             padding-right: 1.5em
             right: -1em
@@ -63,6 +59,7 @@ a
     padding-right: 1em
     top: 25vh
     p
+        font-family: $title-font
         font-size: larger
 
 #social-links
@@ -82,6 +79,8 @@ h3
 h1, h2, h3, h4, h5, h6
     font-family: $title-font
     font-weight: normal
+h4, h5, h6
+    font-family: $body-font
 
 body
     font-family: $body-font
@@ -100,6 +99,7 @@ body
     flex-direction: row
 
 .gallery-item
+    @include card
     display: flex
     flex-flow: column
     gap: 0.5em
@@ -116,8 +116,10 @@ body
     justify-items: center
     background-color: $background
     $size: 200px
-    height: $size
+    min-height: $size/2
     width: $size
+    border: 1px solid #ddd
+    border-radius: 2px
     img
         max-height: $size
         max-width: $size
@@ -128,13 +130,10 @@ body
         font-size: larger
         width: 100%
         flex-flow: row
-        align-items: start
+        align-items: center
         text-align: left
-        border-top: 2px solid $background
-        border-bottom: 2px solid $background
-        &:hover
-            $item-divider: 2px solid #666
-            border-top: $item-divider
-            border-bottom: $item-divider
         .caption
             margin-left: 0.25em
+
+::selection
+    background: #ea9
