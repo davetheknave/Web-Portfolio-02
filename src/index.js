@@ -1,6 +1,6 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route, Link, Switch, withRouter } from "react-router-dom";
+import {BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import './index.sass';
 import GalleryHorizontal from './galleryHorizontal';
 import Gallery from './gallery';
@@ -8,7 +8,6 @@ import Gallery from './gallery';
 const linkedin = "http://linkedin.com/in/david-stearns-70727437";
 const github = "http://github.com/davetheknave";
 const email = "mailto:dave.j.stearns@gmail.com"
-const resume = "resume.pdf"
 
 class Home extends React.Component {
   render() {
@@ -56,12 +55,12 @@ class Menu extends React.Component {
         <li><MenuLink to="/software">
           Software
         </MenuLink></li>
-        <li><MenuLink to="/gallery">
+        {/* <li><MenuLink to="/gallery">
           Art
-        </MenuLink></li>
-        <li><MenuLink to="/music">
+        </MenuLink></li> */}
+        {/* <li><MenuLink to="/music">
           Music
-        </MenuLink></li>
+        </MenuLink></li> */}
         <li><MenuLink to="/privacy">
           Privacy Policy
         </MenuLink></li>
@@ -90,7 +89,7 @@ class Content extends React.Component {
 class Work1 extends Content {
   content = (
   <GalleryHorizontal items={[
-    {name:"Spirit Island",image:"",text:"Coming eventually...",link:""},
+    // {name:"Spirit Island",image:"",text:"Coming eventually...",link:""},
     {name:"Divine Law",image:"DivineLawTitle.png",text:"My and my sister's entry to AI and Games Jam 2021. A game about an angel that defies the laws of physics to stop a serpent from breaking into the Garden of Eden.",link:"https://leafyline.itch.io/divine"},
     {name:"My Personal Website",image:"Website.png",text:"My personal website. You're looking at it right now.",link:"https://github.com/davetheknave/davetheknave.github.io/"},
     {name:"D-Chess",image:"DChess2.png",text:"A 5-dimensional chess game. I made this as a joke.",link:"https://github.com/davetheknave/D-Chess/"},

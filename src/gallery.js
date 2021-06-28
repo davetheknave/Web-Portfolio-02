@@ -1,5 +1,4 @@
-import React, {Fragment} from 'react';
-import {BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import React from 'react';
 
 
 class GalleryImage extends React.Component {
@@ -7,7 +6,7 @@ class GalleryImage extends React.Component {
         return (
             <a className="gallery-item" href={this.props.link}>
             <div className="gallery-item-thumb">
-                <img src={this.props.image}/>
+                <img src={this.props.image} alt={this.props.text}/>
             </div>
             <h4 className="caption">{this.props.text}</h4>
             </a>
