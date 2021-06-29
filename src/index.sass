@@ -1,5 +1,18 @@
 @import 'common'
 
+#home
+    width: $sidebar
+    text-align: right
+    position: fixed
+    padding: 0
+    margin-left: 5em
+    padding-right: 1em
+    top: 25vh
+    p
+        font-family: $title-font
+        font-size: larger
+
+
 ul.menu
     display: flex
     flex-flow: column
@@ -50,17 +63,7 @@ a
     right: 0
     ul li
         margin-bottom: 0.3em
-#home
-    width: $sidebar
-    text-align: right
-    position: fixed
-    padding: 0
-    margin-left: 5em
-    padding-right: 1em
-    top: 25vh
-    p
-        font-family: $title-font
-        font-size: larger
+
 
 #social-links
     a.hyperlink
@@ -137,3 +140,46 @@ body
 
 ::selection
     background: #ea9
+
+
+@media (max-width: 1300px)
+    #site
+        display: flex
+        flex-direction: column
+        padding: 2em
+    #home
+        position: static
+        text-align: center
+        width: initial
+        margin: 0
+        h1
+            text-align: center
+        .menu
+            flex-direction: row
+            justify-content: space-evenly
+    #page
+        left: 0
+        position: static
+        margin-top: 1em
+        margin-left: 0
+        overflow: initial
+        align-self: center
+        padding: 0
+        text-align: center
+        padding-bottom: 2em
+        .gallery-item
+            width: 100%
+            
+@media (max-width: 500px)
+    .gallery-horizontal .gallery-item
+        flex-direction: column
+
+@media (max-width: 300px)
+    #home .menu
+        flex-direction: column
+        align-items: center
+    #home #social-links
+        display: flex
+        flex-direction: column
+        gap: 1em
+        align-items: center
